@@ -1,0 +1,6 @@
+CRITICAL - 2023-11-02 13:48:40 --> Call to undefined method App\Controllers\MainController::response()
+in APPPATH\Controllers\MainController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->getData()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
