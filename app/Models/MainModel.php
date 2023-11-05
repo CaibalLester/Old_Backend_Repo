@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class MainModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'info';
+    protected $table            = 'users';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['lastname', 'firstname', 'gender', 'age'];
+    protected $allowedFields    = ['email', 'password','type'];
 
     // Dates
     protected $useTimestamps = false;
