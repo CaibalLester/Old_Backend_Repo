@@ -7,13 +7,39 @@ use CodeIgniter\Model;
 class MainModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'users';
+    protected $table            = 'lifechangerform';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['email', 'password','type'];
+    protected $allowedFields = [
+        'position',
+        'preferredArea',
+        'referral',
+        'referralBy',
+        'onlineAd',
+        'walkIn',
+        'othersRef',
+        'fname',
+        'nickname',
+        'birthdate',
+        'placeOfBirth',
+        'gender',
+        'bloodType',
+        'homeAddress',
+        'mobileNo',
+        'landline',
+        'email',
+        'citizenship',
+        'othersCitizenship',
+        'naturalizationInfo',
+        'maritalStatus',
+        'maidenName',
+        'spouseName',
+        'sssNo',
+        'tin'
+    ];
 
     // Dates
     protected $useTimestamps = false;

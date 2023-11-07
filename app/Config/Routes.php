@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/GetData', 'MainController::getData');
 $routes->post('/save', 'MainController::save');
+$routes->post('/del', 'MainController::del');
