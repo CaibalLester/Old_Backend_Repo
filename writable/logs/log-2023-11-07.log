@@ -1,0 +1,140 @@
+CRITICAL - 2023-11-07 17:07:31 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:35 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:36 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:36 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:36 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:37 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:37 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:37 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:37 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:57 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:57 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:57 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:58 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:07:58 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:10:13 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:10:14 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:10:14 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:10:14 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:11:41 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-07 17:12:01 --> Undefined property: stdClass::$password
+in APPPATH\Controllers\MainController.php on line 21.
+ 1 APPPATH\Controllers\MainController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\laragon\\www\\backend\\app\\Controllers\\MainController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
