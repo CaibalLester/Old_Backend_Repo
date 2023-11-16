@@ -8,6 +8,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\RestFul\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\MainModel;
+use App\Models\AIALModel;
 use App\Models\UserModel;
 class MainController extends ResourceController
 {
@@ -49,9 +50,49 @@ class MainController extends ResourceController
     $r = $main->insert($data); // assuming you are inserting the data
     return $this->respond($r, 200);
 }
+public function save2()
+{
+$json = $this->request->getJSON();
+$data = [
+    'nonlife' => $json -> nonlife,
+    'life' => $json -> life,
+    'varlife' => $json -> varlife,
+    'accaAndHealth' => $json -> accaAndHealth,
+    'othercb' => $json -> othercb,
+    'othertb' => $json -> othertb,
+    'agencyname' => $json -> othertb,
+    'fname' => $json->fname,
+    'nickname' => $json->nickname,
+    'birthdate' => $json->birthdate,
+    'placeOfBirth' => $json->placeOfBirth,
+    'gender' => $json->gender,
+    'bloodType' => $json->bloodType,
+    'homeAddress' => $json->homeAddress,
+    'mobileNo' => $json->mobileNo,
+    'landline' => $json->landline,
+    'email' => $json->email,
+    'citizenship' => $json->citizenship,
+    'othersCitizenship' => $json->othersCitizenship,
+    'naturalizationInfo' => $json->naturalizationInfo,
+    'maritalStatus' => $json->maritalStatus,
+    'maidenName' => $json->maidenName,
+    'spouseName' => $json->spouseName,
+    'sssNo' => $json->sssNo,
+    'tin' => $json->tin
+];
+$main = new AIALModel();
+$r = $main->insert($data); // assuming you are inserting the data
+return $this->respond($r, 200);
+}
     public function getData()
     {
         $main = new MainModel();
+        $data = $main->findAll();
+        return $this->respond($data, 200);
+    }
+    public function getData2()
+    {
+        $main = new AIALModel();
         $data = $main->findAll();
         return $this->respond($data, 200);
     }
