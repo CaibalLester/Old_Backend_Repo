@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use CodeIgniter\HTTP\Response;
 
 
@@ -10,6 +11,7 @@ use CodeIgniter\API\ResponseTrait;
 use App\Models\MainModel;
 use App\Models\AIALModel;
 use App\Models\UserModel;
+
 class MainController extends ResourceController
 {
     public function index()
@@ -17,73 +19,73 @@ class MainController extends ResourceController
         //
     }
     public function save()
-{
-    $json = $this->request->getJSON();
-    $data = [
-        'position' => $json->position,
-        'preferredArea' => $json->preferredArea,
-        'referral' => $json->referral,
-        'referralBy' => $json->referralBy,
-        'onlineAd' => $json->onlineAd,
-        'walkIn' => $json->walkIn,
-        'othersRef' => $json->othersRef,
-        'fname' => $json->fname,
-        'nickname' => $json->nickname,
-        'birthdate' => $json->birthdate,
-        'placeOfBirth' => $json->placeOfBirth,
-        'gender' => $json->gender,
-        'bloodType' => $json->bloodType,
-        'homeAddress' => $json->homeAddress,
-        'mobileNo' => $json->mobileNo,
-        'landline' => $json->landline,
-        'email' => $json->email,
-        'citizenship' => $json->citizenship,
-        'othersCitizenship' => $json->othersCitizenship,
-        'naturalizationInfo' => $json->naturalizationInfo,
-        'maritalStatus' => $json->maritalStatus,
-        'maidenName' => $json->maidenName,
-        'spouseName' => $json->spouseName,
-        'sssNo' => $json->sssNo,
-        'tin' => $json->tin
-    ];
-    $main = new MainModel();
-    $r = $main->insert($data); // assuming you are inserting the data
-    return $this->respond($r, 200);
-}
-public function save2()
-{
-$json = $this->request->getJSON();
-$data = [
-    'nonlife' => $json -> nonlife,
-    'life' => $json -> life,
-    'varlife' => $json -> varlife,
-    'accaAndHealth' => $json -> accaAndHealth,
-    'othercb' => $json -> othercb,
-    'othertb' => $json -> othertb,
-    'agencyname' => $json -> othertb,
-    'fname' => $json->fname,
-    'nickname' => $json->nickname,
-    'birthdate' => $json->birthdate,
-    'placeOfBirth' => $json->placeOfBirth,
-    'gender' => $json->gender,
-    'bloodType' => $json->bloodType,
-    'homeAddress' => $json->homeAddress,
-    'mobileNo' => $json->mobileNo,
-    'landline' => $json->landline,
-    'email' => $json->email,
-    'citizenship' => $json->citizenship,
-    'othersCitizenship' => $json->othersCitizenship,
-    'naturalizationInfo' => $json->naturalizationInfo,
-    'maritalStatus' => $json->maritalStatus,
-    'maidenName' => $json->maidenName,
-    'spouseName' => $json->spouseName,
-    'sssNo' => $json->sssNo,
-    'tin' => $json->tin
-];
-$main = new AIALModel();
-$r = $main->insert($data); // assuming you are inserting the data
-return $this->respond($r, 200);
-}
+    {
+        $json = $this->request->getJSON();
+        $data = [
+            'position' => $json->position,
+            'preferredArea' => $json->preferredArea,
+            'referral' => $json->referral,
+            'referralBy' => $json->referralBy,
+            'onlineAd' => $json->onlineAd,
+            'walkIn' => $json->walkIn,
+            'othersRef' => $json->othersRef,
+            'fname' => $json->fname,
+            'nickname' => $json->nickname,
+            'birthdate' => $json->birthdate,
+            'placeOfBirth' => $json->placeOfBirth,
+            'gender' => $json->gender,
+            'bloodType' => $json->bloodType,
+            'homeAddress' => $json->homeAddress,
+            'mobileNo' => $json->mobileNo,
+            'landline' => $json->landline,
+            'email' => $json->email,
+            'citizenship' => $json->citizenship,
+            'othersCitizenship' => $json->othersCitizenship,
+            'naturalizationInfo' => $json->naturalizationInfo,
+            'maritalStatus' => $json->maritalStatus,
+            'maidenName' => $json->maidenName,
+            'spouseName' => $json->spouseName,
+            'sssNo' => $json->sssNo,
+            'tin' => $json->tin
+        ];
+        $main = new MainModel();
+        $r = $main->insert($data); // assuming you are inserting the data
+        return $this->respond($r, 200);
+    }
+    public function save2()
+    {
+        $json = $this->request->getJSON();
+        $data = [
+            'nonlife' => $json->nonlife,
+            'life' => $json->life,
+            'varlife' => $json->varlife,
+            'accaAndHealth' => $json->accaAndHealth,
+            'othercb' => $json->othercb,
+            'othertb' => $json->othertb,
+            'agencyname' => $json->othertb,
+            'fname' => $json->fname,
+            'nickname' => $json->nickname,
+            'birthdate' => $json->birthdate,
+            'placeOfBirth' => $json->placeOfBirth,
+            'gender' => $json->gender,
+            'bloodType' => $json->bloodType,
+            'homeAddress' => $json->homeAddress,
+            'mobileNo' => $json->mobileNo,
+            'landline' => $json->landline,
+            'email' => $json->email,
+            'citizenship' => $json->citizenship,
+            'othersCitizenship' => $json->othersCitizenship,
+            'naturalizationInfo' => $json->naturalizationInfo,
+            'maritalStatus' => $json->maritalStatus,
+            'maidenName' => $json->maidenName,
+            'spouseName' => $json->spouseName,
+            'sssNo' => $json->sssNo,
+            'tin' => $json->tin
+        ];
+        $main = new AIALModel();
+        $r = $main->insert($data); // assuming you are inserting the data
+        return $this->respond($r, 200);
+    }
     public function getData()
     {
         $main = new MainModel();
@@ -137,28 +139,32 @@ return $this->respond($r, 200);
         }
     }
 
-    public function verification($length){
+    public function verification($length)
+    {
         $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-         return substr(str_shuffle($str_result),
-         0, $length);
-      }
+        return substr(
+            str_shuffle($str_result),
+            0,
+            $length
+        );
+    }
 
 
-      public function login()
-      {
+    public function login()
+    {
         $user = new UserModel();
         $email = $this->request->getVar('email');
-         $password = $this->request->getVar('password');
-         $data = $user->where('email', $email)->first();
+        $password = $this->request->getVar('password');
+        $data = $user->where('email', $email)->first();
 
-         if($data){
-           $pass = $data['password'];
-           $authenticatePassword = password_verify($password, $pass);
-           if($authenticatePassword){
-             return $this->respond(['msg' => 'okay', 'token' =>$data['token']]);
-           }else{
-             return $this->respond(['msg' => 'error'], 200);
-           }
-         }
-       }
+        if ($data) {
+            $pass = $data['password'];
+            $authenticatePassword = password_verify($password, $pass);
+            if ($authenticatePassword) {
+                return $this->respond(['msg' => 'okay', 'token' => $data['token']]);
+            } else {
+                return $this->respond(['msg' => 'error'], 200);
+            }
+        }
+    }
 }
