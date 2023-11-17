@@ -13,5 +13,5 @@ $routes->post('/save2', 'MainController::save2');
 $routes->post('/del', 'MainController::del');
 
 $routes->post('/authreg', 'MainController::authreg');
-$routes->post('/authlog', 'MainController::authlog');
+$routes->match(['post', 'get'],'/login', 'MainController::login');
 $routes->get('/getuserData', 'MainController::getuserData');

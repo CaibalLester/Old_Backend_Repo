@@ -104,66 +104,61 @@ return $this->respond($r, 200);
         return $this->respond($data, 200);
     }
 
+
     public function authreg()
     {
         helper(['form']);
+
         $rules = [
             'email' => 'required|min_length[6]|max_length[100]|valid_email|is_unique[users.email]',
-            'password' => 'required|min_length[6]|max_length[100]',
-            'role' => 'required|in_list[applicant,admin,agent]',
+            'password' => 'required|min_length[6]|max_length[255]',
         ];
 
         if ($this->validate($rules)) {
             $userModel = new UserModel();
-            $existingUser = $userModel->where('email', $this->request->getVar('email'))->first();
 
-          if ($existingUser) {
-              return $this->response->setStatusCode(400)->setJSON(['errors' => ['email' => 'Email already exists']]);
-          }
+            $token = $this->verification(50); // Make sure this method generates a secure random token
+
             $data = [
                 'email' => $this->request->getVar('email'),
-                'role' => $this->request->getVar('role'), // Assuming 'type' field in the database represents the user role.
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
+                'role' => $this->request->getVar('role'),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'token' => $token,
+                'status' => 'active',
+
             ];
+
             $userModel->save($data);
 
-            return $this->response->setStatusCode(201)->setJSON(['message' => 'Registration successful']);
+            return $this->respond(['msg' => 'okay', 'token' => $token]);
         } else {
             $validationErrors = $this->validator->getErrors();
-            return $this->response->setStatusCode(400)->setJSON(['errors' => $validationErrors]);
+            return $this->respond(['msg' => 'failed', 'errors' => $validationErrors]);
         }
     }
 
-    public function authlog()
-    {
-        $session = session();
-        $userModel = new UserModel();
+    public function verification($length){
+        $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+         return substr(str_shuffle($str_result),
+         0, $length);
+      }
+
+
+      public function login()
+      {
+        $user = new UserModel();
         $email = $this->request->getVar('email');
-        $password = $this->request->getVar('password');
+         $password = $this->request->getVar('password');
+         $data = $user->where('email', $email)->first();
 
-        $data = $userModel->where('email', $email)->first();
-        if ($data) {
-            $pass = $data['password'];
-            $authenticatePassword = password_verify($password, $pass);
-            if ($authenticatePassword) {
-                $ses_data = [
-                    'id' => $data['id'],
-                    'email' => $data['email'],
-                    'role' => 'applicant',
-                    'isLoggedIn' => true,
-                ];
-                $session->set($ses_data);
-
-                // Return a JSON response to Vue.js with the authenticated user data
-                return $this->response->setStatusCode(Response::HTTP_OK)->setJSON($ses_data);
-            } else {
-                // Return an error message for incorrect password
-                return $this->response->setStatusCode(Response::HTTP_UNAUTHORIZED)->setJSON(['msg' => 'Password is incorrect.']);
-            }
-        } else {
-            // Return an error message for non-existing email
-            return $this->response->setStatusCode(Response::HTTP_NOT_FOUND)->setJSON(['msg' => 'Email does not exist.']);
-        }
-    }
-
+         if($data){
+           $pass = $data['password'];
+           $authenticatePassword = password_verify($password, $pass);
+           if($authenticatePassword){
+             return $this->respond(['msg' => 'okay', 'token' =>$data['token']]);
+           }else{
+             return $this->respond(['msg' => 'error'], 200);
+           }
+         }
+       }
 }
