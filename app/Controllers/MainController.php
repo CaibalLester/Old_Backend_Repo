@@ -108,13 +108,18 @@ return $this->respond($r, 200);
     {
         helper(['form']);
         $rules = [
-            'email' => 'required|min_length[1]|max_length[100]|valid_email|is_unique[users.email]',
-            'password' => 'required|min_length[1]|max_length[100]',
+            'email' => 'required|min_length[6]|max_length[100]|valid_email|is_unique[users.email]',
+            'password' => 'required|min_length[6]|max_length[100]',
             'role' => 'required|in_list[applicant,admin,agent]',
         ];
 
         if ($this->validate($rules)) {
             $userModel = new UserModel();
+            $existingUser = $userModel->where('email', $this->request->getVar('email'))->first();
+
+          if ($existingUser) {
+              return $this->response->setStatusCode(400)->setJSON(['errors' => ['email' => 'Email already exists']]);
+          }
             $data = [
                 'email' => $this->request->getVar('email'),
                 'role' => $this->request->getVar('role'), // Assuming 'type' field in the database represents the user role.
