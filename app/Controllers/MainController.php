@@ -49,44 +49,44 @@ class MainController extends ResourceController
             'tin' => $json->tin,
 
             'lifeInsuranceExperience' => $json->lifeInsuranceExperience,
-                'traditional' => $json->traditional,
-                'variable' => $json->variable,
-                'recentInsuranceCompany' => $json->recentInsuranceCompany,
-                'highSchool' => $json->highSchool,
-                'highSchoolCourse' => $json->highSchoolCourse,
-                'highSchoolYear' => $json->highSchoolYear,
-                'college' => $json->college,
-                'collegeCourse' => $json->collegeCourse,
-                'collegeYear' => $json->collegeYear,
-                'graduateSchool' => $json->graduateSchool,
-                'graduateCourse' => $json->graduateCourse,
-                'graduateYear' => $json->graduateYear,
-                'companyName1' => $json->companyName1,
-                'position1' => $json->position1,
-                'employmentFrom1' => $json->employmentFrom1,
-                'employmentTo1' => $json->employmentTo1,
-                'reason1' => $json->reason1,
-                'companyName2' => $json->companyName2,
-                'position2' => $json->position2,
-                'employmentFrom2' => $json->employmentFrom2,
-                'employmentTo2' => $json->employmentTo2,
-                'reason2' => $json->reason2,
-                'companyName3' => $json->companyName3,
-                'position3' => $json->position3,
-                'employmentFrom3' => $json->employmentFrom3,
-                'employmentTo3' => $json->employmentTo3,
-                'reason3' => $json->reason3,
-                'companyName' => $json->companyName,
-                'resposition' => $json->resposition,
-                'contactName' => $json->contactName,
-                'contactPosition' => $json->contactPosition,
-                'emailAddress' => $json->emailAddress,
-                'contactNumber' => $json->contactNumber,
-                'yescuremployed' => $json->yescuremployed,
-                'nocuremployed' => $json->nocuremployed,
-                'allowed' => $json->allowed,
-                'notallowed' => $json->notallowed,
-                'ifnoProvdtls' => $json->ifnoProvdtls,
+            'traditional' => $json->traditional,
+            'variable' => $json->variable,
+            'recentInsuranceCompany' => $json->recentInsuranceCompany,
+            'highSchool' => $json->highSchool,
+            'highSchoolCourse' => $json->highSchoolCourse,
+            'highSchoolYear' => $json->highSchoolYear,
+            'college' => $json->college,
+            'collegeCourse' => $json->collegeCourse,
+            'collegeYear' => $json->collegeYear,
+            'graduateSchool' => $json->graduateSchool,
+            'graduateCourse' => $json->graduateCourse,
+            'graduateYear' => $json->graduateYear,
+            'companyName1' => $json->companyName1,
+            'position1' => $json->position1,
+            'employmentFrom1' => $json->employmentFrom1,
+            'employmentTo1' => $json->employmentTo1,
+            'reason1' => $json->reason1,
+            'companyName2' => $json->companyName2,
+            'position2' => $json->position2,
+            'employmentFrom2' => $json->employmentFrom2,
+            'employmentTo2' => $json->employmentTo2,
+            'reason2' => $json->reason2,
+            'companyName3' => $json->companyName3,
+            'position3' => $json->position3,
+            'employmentFrom3' => $json->employmentFrom3,
+            'employmentTo3' => $json->employmentTo3,
+            'reason3' => $json->reason3,
+            'companyName' => $json->companyName,
+            'resposition' => $json->resposition,
+            'contactName' => $json->contactName,
+            'contactPosition' => $json->contactPosition,
+            'emailAddress' => $json->emailAddress,
+            'contactNumber' => $json->contactNumber,
+            'yescuremployed' => $json->yescuremployed,
+            'nocuremployed' => $json->nocuremployed,
+            'allowed' => $json->allowed,
+            'notallowed' => $json->notallowed,
+            'ifnoProvdtls' => $json->ifnoProvdtls,
         ];
         $main = new MainModel();
         $r = $main->insert($data); // assuming you are inserting the data
@@ -123,7 +123,7 @@ class MainController extends ResourceController
             'sssNo' => $json->sssNo,
             'tin' => $json->tin,
 
-            
+
         ];
         $main = new AIALModel();
         $r = $main->insert($data); // assuming you are inserting the data
@@ -193,24 +193,52 @@ class MainController extends ResourceController
     }
 
 
+    // public function login()
+    // {
+    //     $user = new UserModel();
+    //     $email = $this->request->getVar('email');
+    //     $password = $this->request->getVar('password');
+    //     $role = $this->request->getVar('role');
+    //     $data = $user->where('email', $email)->first();
+
+    //     if ($data) {
+    //         $pass = $data['password'];
+    //         $authenticatePassword = password_verify($password, $pass);
+
+    //         if ($authenticatePassword && $data['role'] == 'applicant') {
+    //             return $this->respond(['msg' => 'okay', 'token' => $data['token']]);
+    //         } else {
+    //             return $this->respond(['msg' => 'error'], 200);
+    //         }
+    //     }
+    // }
+
     public function login()
-  {
-      $user = new UserModel();
-      $email = $this->request->getVar('email');
-      $password = $this->request->getVar('password');
-      $role = $this->request->getVar('role');
-      $data = $user->where('email', $email)->first();
+{
+    $user = new UserModel();
+    $email = $this->request->getVar('email');
+    $password = $this->request->getVar('password');
+    $role = $this->request->getVar('role');
+    $data = $user->where('email', $email)->first();
 
-      if ($data) {
-          $pass = $data['password'];
-          $authenticatePassword = password_verify($password, $pass);
+    if ($data) {
+        $pass = $data['password'];
+        $authenticatePassword = password_verify($password, $pass);
 
-          if ($authenticatePassword && $data['role'] == 'applicant') {
-              return $this->respond(['msg' => 'okay', 'token' => $data['token']]);
-          } else {
-              return $this->respond(['msg' => 'error'], 200);
-          }
-      }
-  }
+        if ($authenticatePassword) {
+            // Check the role
+            if ($role === 'applicant' && $data['role'] === 'applicant') {
+                return $this->respond(['msg' => 'okay', 'token' => $data['token']]);
+            } elseif ($role === 'admin' && $data['role'] === 'admin') {
+                return $this->respond(['msg' => 'okay', 'token' => $data['token']]);
+            } elseif ($role === 'agent' && $data['role'] === 'agent') {
+                return $this->respond(['msg' => 'okay', 'token' => $data['token']]);
+            }
+        }
+    }
+
+    // If authentication fails or role check fails
+    return $this->respond(['msg' => 'error'], 200);
+}
 
 }
